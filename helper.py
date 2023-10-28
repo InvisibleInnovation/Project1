@@ -26,13 +26,13 @@ class Metrics:
     def senstivity(self, ) -> float: # Recall
         return round(self.TP / (self.TP + self.FN), 3)
 
-    def specificity(self, ) -> None:        
+    def specificity(self, ) -> float:        
         return round(self.TN / (self.FP + self.TN), 3)
 
-    def randindex(self, ) -> None:
+    def randindex(self, ) -> float:
         return round((self.TP + self.TN) / (self.TP + self.TN + self.FN + self.FP), 3)
 
-    def cohenkappa(self, ) -> None:
+    def cohenkappa(self, ) -> float:
         num = 2 * (self.TP * self.TN - self.FN * self.FP)
         den = (self.TP + self.FP) * (self.FP + self.TN) + (self.TP + self.FN) * (self.FN + self.TN)
         return round(num/ den, 3)
