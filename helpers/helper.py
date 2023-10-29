@@ -17,40 +17,13 @@ class Metrics:
     __FN (int): False Negative count.
 
     Methods:
-    iou() -> float:
-        Calculates Intersection over Union (IoU) score.
-        Returns:
-            float: IoU score rounded to 3 decimal places.
-
-    dsc() -> float:
-        Calculates Dice Similarity Coefficient (DSC).
-        Returns:
-            float: DSC rounded to 3 decimal places.
-
-    precision() -> float:
-        Calculates Precision.
-        Returns:
-            float: Precision rounded to 3 decimal places.
-
-    senstivity() -> float:
-        Calculates Sensitivity (Recall).
-        Returns:
-            float: Sensitivity rounded to 3 decimal places.
-
-    specificity() -> float:
-        Calculates Specificity.
-        Returns:
-            float: Specificity rounded to 3 decimal places.
-
-    randindex() -> float:
-        Calculates Rand Index.
-        Returns:
-            float: Rand Index rounded to 3 decimal places.
-
-    cohenkappa() -> float:
-        Calculates Cohen's Kappa coefficient.
-        Returns:
-            float: Cohen's Kappa coefficient rounded to 3 decimal places.
+    Intersection over union (IOU)
+    Dice Similarity Coefficient (DSC)
+    Precision
+    Senstivity
+    Specificity
+    Pixel Accuracy/ Rand index
+    Cohen Kappa
     """
 
     def __init__(self, true_mask: np.ndarray, pred_mask: np.ndarray) -> None:
