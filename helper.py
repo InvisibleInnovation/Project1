@@ -9,35 +9,36 @@ class Metrics:
         self.true_mask = true_mask
         self.pred_mask = pred_mask
 
-        self.TP = np.sum((self.true_mask != 0) & (self.pred_mask != 0))
-        self.FP = np.sum((self.true_mask == 0) & (self.pred_mask != 0))
-        self.TN = np.sum((self.true_mask == 0) & (self.pred_mask == 0))
-        self.FN = np.sum((self.true_mask != 0) & (self.pred_mask == 0))
+        self.__TP = np.sum((self.true_mask != 0) & (self.pred_mask != 0))
+        self.__FP = np.sum((self.true_mask == 0) & (self.pred_mask != 0))
+        self.__TN = np.sum((self.true_mask == 0) & (self.pred_mask == 0))
+        self.__FN = np.sum((self.true_mask != 0) & (self.pred_mask == 0))
 
     def iou(self, ) -> float:
-        return round(self.TP / (self.TP + self.FP + self.FN), 3)
+        return round(self.__TP / (self.__TP + self.__FP + self.__FN), 3)
 
     def dsc(self, ) -> float:
-        return round(2 * self.TP / (2 * self.TP + self.FP + self.FN), 3)
+        return round(2 * self.__TP / (2 * self.__TP + self.__FP + self.__FN), 3)
     
     def precision(self, ) -> float:
-        return round(self.TP / (self.TP + self.FP), 3)
+        return round(self.__TP / (self.__TP + self.__FP), 3)
 
     def senstivity(self, ) -> float: # Recall
-        return round(self.TP / (self.TP + self.FN), 3)
+        return round(self.__TP / (self.__TP + self.__FN), 3)
 
     def specificity(self, ) -> float:        
-        return round(self.TN / (self.FP + self.TN), 3)
+        return round(self.__TN / (self.__FP + self.__TN), 3)
 
     def randindex(self, ) -> float:
-        return round((self.TP + self.TN) / (self.TP + self.TN + self.FN + self.FP), 3)
+        return round((self.__TP + self.__TN) / (self.__TP + self.__TN + self.__FN + self.__FP), 3)
 
     def cohenkappa(self, ) -> float:
-        num = 2 * (self.TP * self.TN - self.FN * self.FP)
-        den = (self.TP + self.FP) * (self.FP + self.TN) + (self.TP + self.FN) * (self.FN + self.TN)
+        num = 2 * (self.__TP * self.__TN - self.__FN * self.__FP)
+        den = (self.__TP + self.__FP) * (self.__FP + self.__TN) + (self.__TP + self.__FN) * (self.__FN + self.__TN)
         return round(num/ den, 3)
+    
 
-
+# Testing the functions
 if __name__ == "__main__":
     arr1 = np.random.randint(0, 2, (3, 3))
     arr2 = np.random.randint(0, 2, (3, 3))
