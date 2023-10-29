@@ -38,21 +38,21 @@ class Metrics:
         return round(num/ den, 3)
     
 
-# Testing the functions
-if __name__ == "__main__":
-    arr1 = np.random.randint(0, 2, (3, 3))
-    arr2 = np.random.randint(0, 2, (3, 3))
-
-    print("ARR1:")
-    print(arr1)
-    print("ARR2:")
-    print(arr2, "\n")
-
-    metrics = Metrics(arr1, arr2)
-    print("IOU:", metrics.iou())
-    print("DSC:", metrics.dsc())
-    print("PRECISION:", metrics.precision())
-    print("SENSTIVITY:", metrics.senstivity())
-    print("SPECIFICITY:", metrics.specificity())
-    print("RAND-INDEX:", metrics.randindex())
-    print("COHEN-KAPPA:", metrics.cohenkappa())
+#Testing the functions
+# if __name__ == "__main__":
+#     arr1 = np.random.randint(0, 2, (3, 3))
+#     arr2 = np.random.randint(0, 2, (3, 3))
+#
+#     print("ARR1:")
+#     print(arr1)
+#     print("ARR2:")
+#     print(arr2, "\n")
+#
+#     metrics = Metrics(arr1, arr2)
+#     print("IOU:", metrics.iou())
+#     print("DSC:", metrics.dsc())
+#     print("PRECISION:", metrics.precision())
+#     print("SENSTIVITY:", metrics.senstivity())
+#     print("SPECIFICITY:", metrics.specificity())
+#     print("RAND-INDEX:", metrics.randindex())
+#     print("COHEN-KAPPA:", metrics.cohenkappa())
