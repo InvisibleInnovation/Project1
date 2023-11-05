@@ -15,6 +15,9 @@ class Metrics:
         dsc_intersect = 2 * tf.reduce_sum(tf.multiply(pred_mask, true_mask))
         dsc_union = 2 * tf.reduce_sum(pred_mask) + tf.reduce_sum(true_mask) - dsc_intersect
         return dsc_intersect / dsc_union
+    
+    def dsc_loss(self, true_mask, pred_mask) -> float:
+        return 1 - self.dsc(true_mask, pred_mask)
 
     def precision(self, true_mask, pred_mask) -> float:
         intersect = tf.reduce_sum(tf.multiply(pred_mask, true_mask))
