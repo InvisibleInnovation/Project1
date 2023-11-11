@@ -1,0 +1,8 @@
+Links I used for Image Segmentation Task:
+> https://www.tensorflow.org/tutorials/images/segmentation
+> https://arxiv.org/abs/1505.04597
+> https://arxiv.org/abs/1804.03999
+> https://www.youtube.com/watch?v=GAYJ81M58y8&t=1964s
+> https://www.youtube.com/watch?v=KOF38xAvo8I
+> https://www.youtube.com/watch?v=L5iV5BHkMzM&t=28s
+> https://medium.com/geekculture/u-net-implementation-from-scratch-using-tensorflow-b4342266e406
