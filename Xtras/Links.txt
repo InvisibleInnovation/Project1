@@ -7,3 +7,4 @@ Links I used for Image Segmentation Task:
 > https://www.youtube.com/watch?v=L5iV5BHkMzM&t=28s
 > https://medium.com/geekculture/u-net-implementation-from-scratch-using-tensorflow-b4342266e406
 > https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset
+> https://medium.com/mlearning-ai/understanding-evaluation-metrics-in-medical-image-segmentation-d289a373a3f
